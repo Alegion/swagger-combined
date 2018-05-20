@@ -1,6 +1,14 @@
 language: node_js
+node_js:
+  - "v8.9.0"
+
 before_install:
   - npm update -g npm
-node_js:
-  - "0.12"
-  - "0.10"
+
+env:
+  global:
+    - DOCKER_REPO=quay.io/alegion/swagger-combined
+    - DOCKER_IMAGE=$DOCKER_REPO:build-$TRAVIS_BUILD_NUMBER
+
+script:
+  - docker build --tag $DOCKER_IMAGE .
