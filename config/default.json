@@ -35,6 +35,11 @@
         "docs": "http://localhost/api/v1/swagger-fragments/ontology-service",
         "base_path": "",
         "route_match": []
+    },
+    {
+        "docs": "http://localhost/api/v1/swagger-fragments/dlq-service",
+        "base_path": "",
+        "route_match": []
     }],
     "timeout": 10000,
     "info": {
